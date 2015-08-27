@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Account name:</strong>
+  <%= @account.account_name %>
+</p>
+
+<p>
+  <strong>Payment due:</strong>
+  <%= @account.payment_due %>
+</p>
+
+<p>
+  <strong>Min payment:</strong>
+  <%= @account.min_payment %>
+</p>
+
+<p>
+  <strong>Payment date:</strong>
+  <%= @account.payment_date %>
+</p>
+
+<p>
+  <strong>Payment made:</strong>
+  <%= @account.payment_made %>
+</p>
+
+<p>
+  <strong>Balance:</strong>
+  <%= @account.balance %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>

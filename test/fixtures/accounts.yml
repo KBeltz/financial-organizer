@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account_name: MyString
+  payment_due: 2015-08-27
+  min_payment: 1.5
+  payment_date: 2015-08-27
+  payment_made: 1.5
+  balance: 1.5
+
+two:
+  account_name: MyString
+  payment_due: 2015-08-27
+  min_payment: 1.5
+  payment_date: 2015-08-27
+  payment_made: 1.5
+  balance: 1.5
