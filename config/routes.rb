@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :account_statuses
+  resources :balances
+  resources :payments
   resources :accounts
   root 'accounts#index'
   # The priority is based upon order of creation: first created -> highest priority.

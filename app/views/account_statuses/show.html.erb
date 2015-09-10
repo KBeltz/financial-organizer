@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @account_status.account_id %>
+</p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @account_status.due_date %>
+</p>
+
+<p>
+  <strong>Overdue:</strong>
+  <%= @account_status.overdue %>
+</p>
+
+<%= link_to 'Edit', edit_account_status_path(@account_status) %> |
+<%= link_to 'Back', account_statuses_path %>

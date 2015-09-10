@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150827190747) do
+ActiveRecord::Schema.define(version: 20150910064738) do
+
+  create_table "account_statuses", force: :cascade do |t|
+    t.integer  "account_id"
+    t.date     "due_date"
+    t.boolean  "overdue"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "accounts", force: :cascade do |t|
     t.string   "account_name"
@@ -22,6 +30,22 @@ ActiveRecord::Schema.define(version: 20150827190747) do
     t.float    "balance"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "balances", force: :cascade do |t|
+    t.integer  "account_id"
+    t.float    "balance_amount"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.integer  "account_id"
+    t.float    "amount"
+    t.date     "payment_date"
+    t.string   "confirmation_number"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
 end

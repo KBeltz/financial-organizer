@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Account Statuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Account</th>
+      <th>Due date</th>
+      <th>Overdue</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @account_statuses.each do |account_status| %>
+      <tr>
+        <td><%= account_status.account_id %></td>
+        <td><%= account_status.due_date %></td>
+        <td><%= account_status.overdue %></td>
+        <td><%= link_to 'Show', account_status %></td>
+        <td><%= link_to 'Edit', edit_account_status_path(account_status) %></td>
+        <td><%= link_to 'Destroy', account_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Account status', new_account_status_path %>
